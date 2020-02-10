@@ -1,0 +1,87 @@
+<h1 class="text-center">Encrypt-Decrypt with AES</h1>  
+  
+<br>  
+<div>  
+  <div class="row">  
+    <div class="col-sm-6">  
+      <button type="button" class="btn btn-primary btn-lg btn-block">  
+        Encryption  
+      </button>  
+      <br>  
+      <div class="form-group">  
+        <label for="txtTextToConvert">Plain Text</label>  
+        <input type="text" class="form-control" placeholder="Enter text you want to encrypt" [(ngModel)]="plainText">  
+      </div>  
+  
+      <div class="form-group">  
+        <label for="txtPassword">Password</label>  
+        <input type="password" class="form-control" placeholder="Enter encryption password" [(ngModel)]="password">  
+      </div>  
+      <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea>  
+      <br>  
+      <button type="button" style="width: 20%; padding-right: 5px; padding-left: 5px; margin-left: auto; margin-right: auto;" class="btn btn-primary btn-lg btn-block" (click)="convertText('encrypt')">Encrypt</button>  
+    </div>  
+    <div class="col-sm-6">  
+      <button type="button" class="btn btn-dark btn-lg btn-block">  
+        Decryption  
+      </button>  
+      <br>  
+      <div class="form-group">  
+        <label for="txtTextToConvert">Encrypted Text</label>  
+      
+        <input type="text" class="form-control" placeholder={{conversionEncryptOutput}} >
+
+      </div>  
+  
+      <div class="form-group">  
+        <label for="txtPassword">Password</label>  
+        <input type="password" class="form-control" placeholder="Enter decryption password" [(ngModel)]="password">  
+      </div>  
+      <textarea class="form-control" readonly rows="3">{{conversionDecryptOutput}}</textarea>  
+      <br>  
+      <button type="button" style="width: 20%; padding-right: 5px; padding-left: 5px; margin-left: auto; margin-right: auto; text-align: center;" class="btn btn-dark btn-lg btn-block" (click)="convertText('decrypt')">Decrypt</button>  
+    </div>  
+  </div>  
+</div>  
+<!-- <h1 class="text-center">Encrypt-Decrypt App</h1>
+
+<br>
+
+<button 
+        type="button"
+        class="btn btn-primary btn-lg btn-block"
+        (click)="changeMode()">
+        
+        Toggle Mode ({{ encryptMode ? "Encryption" : "Decryption" }})
+
+</button>
+
+<br>
+
+<div class="form-group">
+  <label for="txtTextToConvert">{{ encryptMode ? "Plain" : "Encrypted" }} Text</label>
+  <input 
+          type="text"
+          class="form-control"
+          id="txtTextToConvert"
+          placeholder="Enter text you want to {{ encryptMode ? 'encrypt' : 'decrypt' }}"       
+          [(ngModel)]="textToConvert"
+  >
+</div>
+
+<div class="form-group">
+  <label for="txtPassword">Password</label>
+  <input 
+          type="password"
+          class="form-control"
+          id="txtPassword"
+          placeholder="Enter {{ encryptMode ? 'encryption' : 'decryption' }} password"         
+          [(ngModel)]="password"
+  >
+</div>
+
+<textarea class="form-control" readonly rows="3">{{conversionOutput}}</textarea>
+
+<br>
+
+<button type="button" class="btn btn-success" (click)="convertText()">{{ encryptMode ? "Encrypt" : "Decrypt" }}</button> -->
